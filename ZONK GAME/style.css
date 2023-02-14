@@ -1,0 +1,107 @@
+:root {
+  --main-green: rgb(12, 235, 38);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: [left] 40vw [center] 1vw [right] 59vw;
+  margin: 0;
+  height: 200vh;
+}
+
+.intro {
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro__left {
+  /* border: 1px solid orange; */
+}
+
+.intro__center {
+  /* border: 1px solid magenta; */
+}
+
+.intro__right {
+  height: 300vh;
+}
+
+.nav__container {
+  display: grid;
+  margin-top: 20vh;
+}
+
+.nav__item {
+  display: grid;
+  grid-template-columns: [select] 20% [links] 80%;
+}
+
+.nav__link {
+  color: var(--main-green);
+  font-size: 3vw;
+  font-family: "Space Mono", monospace;
+  font-weight: 500;
+  /* padding-left: 10rem; */
+
+  text-align: left;
+  grid-column-start: 2;
+}
+
+.nav__selection__area {
+  padding-right: 1rem;
+  color: var(--main-green);
+  font-size: 3vw;
+  font-family: "Space Mono", monospace;
+  font-weight: 500;
+  grid-column-start: 1;
+  text-align: right;
+}
+
+.nav__selected {
+  padding-left: 2vw;
+}
+
+.matrix__container {
+  display: flex;
+}
+
+.matrix__column {
+  color: white;
+  font-family: "Space Mono", monospace;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  /* border: 1px solid red; */
+}
+
+.matrix__letter {
+  color: orange;
+  font-size: 1vw;
+}
+
+.matrix__letter--hidden {
+  color: red;
+  visibility: hidden;
+}
+
+.matrix__letter--temp1 {
+  color: var(--main-green);
+  visibility: hidden;
+  opacity: 0;
+  color: rgb(255, 1, 158);
+  transition: visibility 0s 4s, opacity 4s linear;
+}
+.matrix__letter--first {
+  color: white;
+}
